@@ -179,7 +179,7 @@ public class UserView {
 
     public void setRole(User user) {
         System.out.println("\t----------------------------------------------------------");
-        System.out.println("\t--░░░░░░░░░░░░░░░░░[PHÂN QUYỀN NGƯỜI DÙNG]░░░░░░░░░░░░░░--");
+        System.out.println("\t--                  PHÂN QUYỀN NGƯỜI DÙNG               --");
         System.out.println("\t----------------------------------------------------------");
         System.out.println("\t--                                                      --");
         System.out.println("\t--                  1. THÀNH VIÊN                       --");
@@ -229,7 +229,7 @@ public class UserView {
                 showUsers(InputOption.UPDATE);
                 int id = inputId(InputOption.UPDATE);
                 System.out.println("\t----------------------------------------------------------");
-                System.out.println("\t--░░░░░░░░░░░░░░░░░░░[THAY ĐỔI NGƯỜI DÙNG]░░░░░░░░░░░░░░--");
+                System.out.println("\t--                    THAY ĐỔI NGƯỜI DÙNG               --");
                 System.out.println("\t----------------------------------------------------------");
                 System.out.println("\t--                                                      --");
                 System.out.println("\t--                  1. THAY ĐỔI TÊN                     --");
@@ -297,7 +297,7 @@ public class UserView {
         System.out.println();
         for (User user : userService.findAll()) {
             System.out.printf("%-17s %-20s %-20s %-30s %-15s %-17s %-20s\n",
-                    "【" + user.getId() + "】",
+                    user.getId(),
                     user.getFullName(),
                     user.getMobile(),
                     user.getEmail(),
@@ -313,8 +313,8 @@ public class UserView {
 
     public void menuUser() {
         int number;
-        System.out.println("\t------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-        System.out.println("\t--░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░[DANH SÁCH NGƯỜI DÙNG]░░░░░░░░░░░░░░░░░░░░░░░░░░░░░--");
+        System.out.println("\t-------------------------------------------------------------------------------------");
+        System.out.println("\t--                              DANH SÁCH NGƯỜI DÙNG                               --");
         System.out.println("\t-------------------------------------------------------------------------------------");
         System.out.println("\t--                                                                                 --");
         System.out.println("\t--                           1. HIỂN THỊ NGƯỜI DÙNG                                --");

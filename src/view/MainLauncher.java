@@ -19,7 +19,7 @@ public class MainLauncher {
 
     public void mainMenu() {
         System.out.println("\t----------------------------------------------------------");
-        System.out.println("\t--░░░░░░░░░░░░░░░░░░░░[DANH SÁCH QUẢN LÝ]░░░░░░░░░░░░░░░--");
+        System.out.println("\t--                     DANH SÁCH QUẢN LÝ                --");
         System.out.println("\t----------------------------------------------------------");
         System.out.println("\t--                                                      --");
         System.out.println("\t--                  1. QUẢN LÍ NGƯỜI DÙNG               --");
@@ -28,7 +28,7 @@ public class MainLauncher {
         System.out.println("\t--                  0. THOÁT CHƯƠNG TRÌNH               --");
         System.out.println("\t--                                                      --");
         System.out.println("\t----------------------------------------------------------");
-        System.out.print("\t\t>CHỌN CHỨC NĂNG : ");
+        System.out.print("\t\t>CHỌN CHỨC NĂNG: ");
         do {
             try {
                 number = Integer.parseInt(sc.nextLine());

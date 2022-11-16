@@ -59,12 +59,12 @@ public class AdminView {
 
                 System.out.println("\t----------------------------------------------------------");
                 System.out.println("\t--                                                      --");
-                System.out.println("\t--               【1】. ĐĂNG NHẬP LẠI                    --");
-                System.out.println("\t--               【2】. QUAY LẠI                         --");
-                System.out.println("\t--               【0】. THOÁT CHƯƠNG TRÌNH               --");
+                System.out.println("\t--                  1. ĐĂNG NHẬP LẠI                    --");
+                System.out.println("\t--                  2. QUAY LẠI                         --");
+                System.out.println("\t--                  0. THOÁT CHƯƠNG TRÌNH               --");
                 System.out.println("\t--                                                      --");
                 System.out.println("\t----------------------------------------------------------");
-                System.out.print("> CHỌN CHỨC NĂNG : ");
+                System.out.print("\t\t>CHỌN CHỨC NĂNG: ");
                 String choice = sc.nextLine();
                 switch (choice) {
                     case "1":
@@ -94,7 +94,7 @@ public class AdminView {
                 System.out.println("\t--                  0. THOÁT CHƯƠNG TRÌNH               --");
                 System.out.println("\t--                                                      --");
                 System.out.println("\t----------------------------------------------------------");
-                System.out.print("\t\t> CHỌN CHỨC NĂNG : ");
+                System.out.print("\t\t>CHỌN CHỨC NĂNG: ");
                 String choice = sc.nextLine();
                 switch (choice) {
                     case "1":

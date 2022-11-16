@@ -11,7 +11,7 @@ public class UserSubMenu {
         Scanner sc = new Scanner(System.in);
         OrderView orderView = new OrderView();
         System.out.println("\t----------------------------------------------------------");
-        System.out.println("\t--░░░░░░░░░░░░░░░░░░░░[QUẢN LÍ HÓA ĐƠN]░░░░░░░░░░░░░░░░░--");
+        System.out.println("\t--                     QUẢN LÍ HÓA ĐƠN                  --");
         System.out.println("\t----------------------------------------------------------");
         System.out.println("\t--                                                      --");
         System.out.println("\t--                  1. TẠO ĐƠN HÀNG                     --");

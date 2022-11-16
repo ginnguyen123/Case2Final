@@ -108,16 +108,16 @@ public class OrderView {
             System.out.println("TẠO ĐƠN HÀNG THÀNH CÔNG");
             do {
                 System.out.println("\t----------------------------------------------------------");
-                System.out.println("\t--░░░░░░░░░░░░░░░░░░░░[QUẢN LÍ HÓA ĐƠN]░░░░░░░░░░░░░░░░░--");
+                System.out.println("\t--                     QUẢN LÍ HÓA ĐƠN                  --");
                 System.out.println("\t----------------------------------------------------------");
                 System.out.println("\t--                                                      --");
-                System.out.println("\t--               【1】. TẠO ĐƠN HÀNG TIẾP                --");
-                System.out.println("\t--               【2】. IN HÓA ĐƠN                       --");
-                System.out.println("\t--               【3】. QUAY LẠI                         --");
-                System.out.println("\t--               【4】. THOÁT                            --");
+                System.out.println("\t--                  1. TẠO ĐƠN HÀNG TIẾP                --");
+                System.out.println("\t--                  2. IN HÓA ĐƠN                       --");
+                System.out.println("\t--                  3. QUAY LẠI                         --");
+                System.out.println("\t--                  4. THOÁT                            --");
                 System.out.println("\t--                                                      --");
                 System.out.println("\t----------------------------------------------------------");
-                System.out.print("CHỌN SỐ : ");
+                System.out.print("\t\t>CHỌN CHỨC NĂNG : ");
                 String choice = sc.nextLine();
                 switch (choice) {
                     case "1":
@@ -153,16 +153,16 @@ public class OrderView {
             System.out.println("TẠO ĐƠN HÀNG THÀNH CÔNG");
             do {
                 System.out.println("\t----------------------------------------------------------");
-                System.out.println("\t--░░░░░░░░░░░░░░░░░░░░[QUẢN LÍ HÓA ĐƠN]░░░░░░░░░░░░░░░░░--");
+                System.out.println("\t--                     QUẢN LÍ HÓA ĐƠN                  --");
                 System.out.println("\t----------------------------------------------------------");
                 System.out.println("\t--                                                      --");
-                System.out.println("\t--               【1】. TẠO ĐƠN HÀNG TIẾP                --");
-                System.out.println("\t--               【2】. IN HÓA ĐƠN                       --");
-                System.out.println("\t--               【3】. QUAY LẠI                         --");
-                System.out.println("\t--               【4】. THOÁT                            --");
+                System.out.println("\t--                  1. TẠO ĐƠN HÀNG TIẾP                --");
+                System.out.println("\t--                  2. IN HÓA ĐƠN                       --");
+                System.out.println("\t--                  3. QUAY LẠI                         --");
+                System.out.println("\t--                  4. THOÁT                            --");
                 System.out.println("\t--                                                      --");
                 System.out.println("\t----------------------------------------------------------");
-                System.out.print("CHỌN SỐ : ");
+                System.out.print("\t\tCHỌN CHỨC NĂNG : ");
                 String choice = sc.nextLine();
                 switch (choice) {
                     case "1":
@@ -189,7 +189,7 @@ public class OrderView {
 
     public void orderMenu() {
         System.out.println("\t----------------------------------------------------------");
-        System.out.println("\t--░░░░░░░░░░░░░░░░░░░░[QUẢN LÍ HÓA ĐƠN]░░░░░░░░░░░░░░░░░--");
+        System.out.println("\t--                     QUẢN LÍ HÓA ĐƠN                  --");
         System.out.println("\t----------------------------------------------------------");
         System.out.println("\t--                                                      --");
         System.out.println("\t--                  1. TẠO ĐƠN HÀNG                     --");
@@ -202,7 +202,7 @@ public class OrderView {
 
         String choice;
         do {
-            System.out.print("\t\t>CHỌN CHỨC NĂNG : ");
+            System.out.print("\t\t>CHỌN CHỨC NĂNG: ");
             choice = sc.nextLine();
             switch (choice) {
                 case "1":
@@ -255,7 +255,7 @@ public class OrderView {
                     }
                 }
                 System.out.printf("%-17s %-20s %-20s %-15s %-15s %-17s %-15s %-20s\n",
-                        "【" + order.getId() + "】",
+                        order.getId(),
                         order.getFullName(),
                         order.getMobile(),
                         order.getAddress(),
@@ -273,7 +273,7 @@ public class OrderView {
             boolean is = true;
             do {
                 System.out.println("NHẤN 1 ĐỂ QUAY LẠI \t|\t NHẤN 0 ĐỂ THOÁT CHƯƠNG TRÌNH");
-                System.out.print("░░░ ");
+                System.out.print("\t\t>CHỌN CHỨC NĂNG :  ");
                 String choice = sc.nextLine();
                 switch (choice) {
                     case "1":
@@ -310,7 +310,7 @@ public class OrderView {
             );
             for (OrderItem orderItem : orderItems) {
                 System.out.printf("%-17s %-20s %-20s %-15s %-15s %-17s %-15s %-20s\n",
-                        "【" + order.getId() + "】",
+                        order.getId(),
                         order.getFullName(),
                         order.getMobile(),
                         order.getAddress(),
@@ -325,16 +325,16 @@ public class OrderView {
             }
             boolean is = true;
             do {
-                System.out.println("NHẤN 1 ĐÊ TIẾP TỤC \t|\t NHẤN 2 ĐỂ QUAY LẠI \t|\t NHẤN 0 ĐỂ THOÁT CHƯƠNG TRÌNH");
-                System.out.print("░░░ ");
+                System.out.println("NHẤN 1 ĐÊ TIẾP TỤC \t|\t NHẤN 0 ĐỂ THOÁT CHƯƠNG TRÌNH");
+                System.out.print("\t\t> CHỌN CHỨC NĂNG: ");
                 String choice = sc.nextLine();
                 switch (choice) {
                     case "1":
                         addOrder();
                         break;
-                    case "2":
-                        orderMenu();
-                        break;
+//                    case "2":
+//                        orderMenu();
+//                        break;
                     case "0":
                         AppUtils.exit();
                         break;

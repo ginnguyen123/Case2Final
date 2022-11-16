@@ -134,18 +134,18 @@ public class ProductView {
             showProducts(InputOption.UPDATE);
             long id = inputId(InputOption.UPDATE);
             System.out.println("\t----------------------------------------------------------");
-            System.out.println("\t--░░░░░░░░░░░░░░░░░░░░[THAY ĐỔI SẢN PHẨM]░░░░░░░░░░░░░░░--");
+            System.out.println("\t--                     THAY ĐỔI SẢN PHẨM                --");
             System.out.println("\t----------------------------------------------------------");
             System.out.println("\t--                                                      --");
-            System.out.println("\t--               【1】. THAY ĐỔI SẢN PHẨM                --");
-            System.out.println("\t--               【2】. THAY ĐỔI SỐ LƯỢNG                --");
-            System.out.println("\t--               【3】. THAY ĐỔI GIÁ                     --");
-            System.out.println("\t--               【4】. THAY ĐỔI TẤT CẢ                  --");
-            System.out.println("\t--               【5】. QUAY LẠI                         --");
-            System.out.println("\t--               【0】. THOÁT CHƯƠNG TRÌNH               --");
+            System.out.println("\t--                  1. THAY ĐỔI SẢN PHẨM                --");
+            System.out.println("\t--                  2. THAY ĐỔI SỐ LƯỢNG                --");
+            System.out.println("\t--                  3. THAY ĐỔI GIÁ                     --");
+            System.out.println("\t--                  4. THAY ĐỔI TẤT CẢ                  --");
+            System.out.println("\t--                  5. QUAY LẠI                         --");
+            System.out.println("\t--                  0. THOÁT CHƯƠNG TRÌNH               --");
             System.out.println("\t--                                                      --");
             System.out.println("\t----------------------------------------------------------");
-            System.out.print("░░░░░░░░░░░░░░░░░░░░░░░░░░  CHỌN SỐ : ");
+            System.out.print("\t\t> CHỌN CHỨC NĂNG: ");
             int option = AppUtils.retryChoose(0, 5);
             Product product = new Product();
             product.setId(id);
@@ -196,7 +196,7 @@ public class ProductView {
         while (!productService.exists(id = inputId(InputOption.DELETE))) {
             System.out.println("KHÔNG TÌM THẤY ID CẦN XÓA");
             System.out.println("NHẤN 1 ĐÊ TIẾP TỤC \t|\t NHẤN 2 ĐỂ QUAY LẠI \t|\t NHẤN 0 ĐỂ THOÁT CHƯƠNG TRÌNH");
-            System.out.print("░░░ ");
+            System.out.print("\t\t>CHỌN CHỨC NĂNG : ");
             String option = sc.nextLine();
             switch (option) {
                 case "1":
@@ -212,11 +212,11 @@ public class ProductView {
             }
         }
         System.out.println("\t----------------------------------------------------------");
-        System.out.println("\t--░░░░░░░░░░░░░░░░░░░░░░░[XÁC NHẬN XÓA]░░░░░░░░░░░░░░░░░--");
+        System.out.println("\t--                  XÁC NHẬN XÓA                        --");
         System.out.println("\t----------------------------------------------------------");
         System.out.println("\t--                                                      --");
-        System.out.println("\t--               【1】. ĐỒNG Ý XÓA                       --");
-        System.out.println("\t--               【2】. QUAY LẠI                         --");
+        System.out.println("\t--                  1. ĐỒNG Ý XÓA                       --");
+        System.out.println("\t--                  2. QUAY LẠI                         --");
         System.out.println("\t--                                                      --");
         System.out.println("\t----------------------------------------------------------");
         int option = AppUtils.retryChoose(1, 2);
@@ -239,7 +239,7 @@ public class ProductView {
         System.out.println();
         for (Product product : products) {
             System.out.printf("%-17s %-20s %-15s %-20s %-25s %-25s\n",
-                    "【" + product.getId() + "】",
+                    product.getId(),
                     product.getTitle(),
                     product.getQuantity(),
                     product.getPrice(),
@@ -257,7 +257,7 @@ public class ProductView {
         while (!productService.exists(id = inputId(option))) {
             System.out.println("KHÔNG TÌM THẤY ID CẦN TÌM");
             System.out.println("NHẤN 1 ĐÊ TIẾP TỤC \t|\t NHẤN 2 ĐỂ QUAY LẠI \t|\t NHẤN 0 ĐỂ THOÁT CHƯƠNG TRÌNH");
-            System.out.print("░░░ ");
+            System.out.print("\t\t>CHỌN CHỨC NĂNG : ");
             String choice = sc.nextLine();
             switch (choice) {
                 case "1":
@@ -283,7 +283,7 @@ public class ProductView {
         for (Product product : productService.findAll()) {
             if (product.getId() == id) {
                 System.out.printf("%-17s %-20s %-15s %-20s %-25s %-25s\n",
-                        "【" + product.getId() + "】",
+                        product.getId(),
                         product.getTitle(),
                         product.getQuantity(),
                         AppUtils.doubleToVND(product.getPrice()),
@@ -316,7 +316,7 @@ public class ProductView {
         System.out.println();
         for (Product product : productService.findAll()) {
             System.out.printf("%-17s %-20s %-15s %-20s %-25s %-25s\n",
-                    "【" + product.getId() + "】",
+                    product.getId(),
                     product.getTitle(),
                     product.getQuantity(),
                     AppUtils.doubleToVND(product.getPrice()),
@@ -353,7 +353,7 @@ public class ProductView {
 
     public void menuProduct() {
         System.out.println("\t--------------------------------------------------------------------------------------");
-        System.out.println("\t--░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░[DANH SÁCH SẢN PHẨM]░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░--");
+        System.out.println("\t--                                DANH SÁCH SẢN PHẨM                                --");
         System.out.println("\t--------------------------------------------------------------------------------------");
         System.out.println("\t--                                                                                  --");
         System.out.println("\t--                                1. HIỂN THỊ SẢN PHẨM                              --");
@@ -369,7 +369,7 @@ public class ProductView {
         System.out.println("\t--------------------------------------------------------------------------------------");
         String choice;
         do {
-            System.out.print("\t\t>CHỌN SỐ : ");
+            System.out.print("\t\t>CHỌN CHỨC NĂNG : ");
             choice = sc.nextLine();
             switch (choice) {
                 case "1":
